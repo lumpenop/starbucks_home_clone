@@ -1,0 +1,336 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+
+.wrap{
+    width: 100%;
+}
+
+.container{
+    width: 1100px;
+    height: 120px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.gnb_wrap{
+    width: 100%;
+}
+
+
+/***** header section *****/
+
+.logo a{
+    background: url(
+        https://www.starbucks.co.kr/common/img/common/logo.png
+    ) no-repeat;
+    display: block;
+    overflow: hidden;
+    text-indent: -20000px;
+    width: 100%;
+    height: 100%;
+}
+
+.logo{
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    top: 22px;
+    z-index: 12;
+}
+
+.gnb_wrap{
+    background: #f6f5ef;
+    position: relative;
+}
+
+.search_btn{
+    float: right;
+    margin:1.5% 5% 0 0 ;
+}
+
+.util_nav > ul{
+    display: flex;
+    position: absolute;
+    left: 52%;
+  
+}
+
+
+.util_nav > ul > li > a{
+    padding: 16px 12px;
+    display: block;
+    font-size: 13px;
+}
+
+.gnb_nav > div > ul {
+    display: flex;
+    float: right;
+    text-align: center;
+
+}
+
+.gnb_nav{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 11;
+    text-align: center;
+    height: 66px;
+    border-bottom:1px solid #e5e5e5;
+    border-spacing: 0;
+}
+
+
+
+.gnb_nav > div > ul > li {
+    float: right;
+}
+
+.gnb_nav_con > ul > li > h2 > a{
+    padding: 6px 12px 0 12px;
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    height: 68px;
+    line-height: 32px;
+}
+
+.gnb_sub{
+    position: absolute;
+    left: -41%;
+    top: 53%;
+}
+
+.gnb_sub_txbg,
+.gnb_sub {
+    display: none;
+}
+
+.sub_on{
+    display: block !important;
+    z-index: 99999;
+}
+
+.gnb_sub_txbg{
+    position: absolute;
+    width: 2000px;
+    left: -41%;
+    top: 294%;
+    background: url(
+        https://www.starbucks.co.kr/common/img/common/gnb_sub_txbg.jpg
+    );
+    padding: 30px 0 20px;
+}
+
+.gnb_sub_tx{
+    float: left;
+}
+
+.gnb_sub_tx a{
+    color: #999;
+    font-size: 14px;
+    text-align: left;
+}
+
+.gnb_sub_tx h3{
+    margin-top: 8px;
+    text-align: left;
+}
+
+.gnb_sub_tx p{
+    color: #669900;
+    margin-top: 4px;
+    font-size: 13px;
+}
+
+.gnb_sub{
+    width: 2000px;
+    background: #2C2A29;
+    padding: 20px 0;
+   
+}
+
+.gnb_sub_tit > a{
+    font-size: 16px;
+    font-weight: bold;
+    color: white !important;
+}
+
+.gnb_sub_con ul {
+    float: left;
+}
+
+.gnb_sub_con ul a{
+    padding: 6px 12px;
+    display: block;
+    font-size: 12px;
+    color: #999;
+}
+
+
+
+/**** sub_title section *****/
+
+.smap{
+    position: absolute;
+    right: 0;
+    top: 60px;
+    display: flex;
+    align-items:baseline;
+    
+}
+
+.smap li {
+    vertical-align: middle;
+    margin-right: 5px;
+   
+}
+
+.arrow{
+    font-size: 20px;
+    line-height: 20px;
+    color: gray;
+    
+}
+
+
+/***** slider section *****/
+
+
+.main_slider{
+    position: relative;
+    width: 2000px;
+    margin: 0 auto;
+    height: 400px;
+   
+}
+
+.main_slider li{
+  
+    
+    height: 400px;
+}
+
+
+.main_slider img{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    object-fit: cover;
+   
+}
+
+
+.main_slider > li:last-child > img{
+    opacity: 0;
+}
+
+
+.opacityOn{
+    animation: opac 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes opac{
+    from{
+        opacity: 0;
+    }to {
+        opacity: 1;
+    }
+}
+
+.opacityOff{
+    animation: opac2 1s;
+    animation-fill-mode: forwards;
+    opacity: 1;
+}
+
+@keyframes opac2 {
+    from{
+        opacity: 1;
+    }to {
+        opacity: 0;
+    }
+}
+
+.pause{
+    background: url(
+        https://www.starbucks.co.kr/common/img/coffee/icon/pause.png
+    )0 0;
+    height: 15px;
+    width: 15px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.pauseStart{
+    background: url(
+        https://www.starbucks.co.kr/common/img/coffee/icon/play.png
+    ) ;
+}
+
+.slider_control{
+    position: absolute;
+    z-index: 9999;
+    text-align: center;
+    display: block;
+    width: 100%;
+    bottom: -10%;
+    
+}
+
+.slider_control_wrap{
+    display: inline-flex;
+    align-items: center;
+    height: 15px;
+}
+
+.slide_page0{
+    background: url(
+        https://www.starbucks.co.kr/common/img/coffee/icon/visual_on.png
+    ) 0 0;
+    height: 15px;
+    width:15px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.slide_page1{
+    background: url(
+        https://www.starbucks.co.kr/common/img/coffee/icon/visual_off.png
+    ) 0 0;
+    height: 15px;
+    width:15px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.start{
+    background: url(
+        https://www.starbucks.co.kr/common/img/coffee/icon/play.png
+    ) 0 0 ;
+
+    height: 15px;
+    width:15px;
+    display: none;
+    margin-right: 10px;
+    
+}
+
+.gnb_sub_con a:hover {
+    text-decoration: underline;
+}
