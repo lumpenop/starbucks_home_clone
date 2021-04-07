@@ -25,8 +25,12 @@ a{
     position: relative;
 }
 
+
 .gnb_wrap{
     width: 100%;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
 }
 
 
@@ -53,7 +57,7 @@ a{
 
 .gnb_wrap{
     background: #f6f5ef;
-    position: relative;
+
 }
 
 .search_btn{
@@ -80,6 +84,10 @@ a{
     float: right;
     text-align: center;
 
+}
+
+.body_wrap{
+    padding-top: 120px;
 }
 
 .gnb_nav{
@@ -210,10 +218,14 @@ a{
 /***** slider section *****/
 
 
-.main_slider{
+.main_visual_wrap{
     position: relative;
-    width: 2000px;
-    margin: 0 auto;
+}
+
+.main_slider{
+
+    width: 100%;
+ 
     height: 400px;
    
 }
@@ -228,7 +240,7 @@ a{
 .main_slider img{
     position: absolute;
     width: 100%;
-    top: 0;
+    bottom: 0;
     object-fit: cover;
    
 }
@@ -285,11 +297,11 @@ a{
 
 .slider_control{
     position: absolute;
-    z-index: 9999;
+    z-index: 10;
     text-align: center;
     display: block;
     width: 100%;
-    bottom: -10%;
+    bottom: 5%;
     
 }
 
@@ -333,4 +345,377 @@ a{
 
 .gnb_sub_con a:hover {
     text-decoration: underline;
+}
+
+
+/***** layer floating *****/
+
+.layer_floating{
+    background: transparent;
+    position: fixed;
+    z-index: 9999;
+    right: 10%;
+    top: 25%;
+   
+}
+
+/********** blooming *************/
+
+.blooming_wrap{
+    background: url(
+        https://image.istarbucks.co.kr/upload/common/img/main/2021/2021_cherryblossom_bg.jpg
+    )no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 646px;
+}
+
+.blooming_con{
+    padding-top: 59px;
+    position: relative;
+}
+
+.blooming_con > a{
+    width: 125px;
+    height: 38px;
+    line-height: 34px;
+    border: 2px solid white;
+    border-radius: 6px;
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    position: absolute;
+    top: 183%;
+    left: 11%;
+
+}
+
+
+.cherry_blossom{
+    position:absolute;
+    top: 190%;
+    left: 29%;
+}
+
+.cherry_blossom > img{
+    position: absolute;
+    top: 50%;
+    right: 80%;
+}
+
+.midnight_bergamot{
+    position: absolute;
+    left: 55%;
+}
+
+.midnight_bergamot > img{
+    position: absolute;
+    top: -30%;
+    left: 3%;
+}
+
+.strawberry_delight{
+    position: absolute;
+    left: 76%;
+    top: 210%;
+}
+
+.strawberry_delight > img{
+    position: absolute;
+    top: -30%;
+}
+
+.line_notice_wrap{
+    width: 100%;
+    position: relative;
+}
+
+.line_notice_left,
+.line_notice_right{
+    height: 62px;
+    width: 50%;
+}
+
+.line_notice_left{
+    background: black;
+    position: absolute;
+  
+}
+
+.line_notice_right{
+    background: #f6f5ef;
+    position: relative;
+    float: right;
+}
+
+
+.line_notice_conl,
+.line_notice_conr{
+    height: 62px;
+}
+
+.line_notice_conl{
+    width: 730px;
+    background: black;
+    position: absolute;
+}
+
+.line_notice_conr{
+    width: 550px;
+    position:absolute;
+    right: 0;
+    background: #f6f5ef;
+}
+
+.line_notice_con{
+    width: 1280px;
+    height: 100%;
+}
+
+.line_notice_dl{
+    margin: 10px 0 0 80px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.notice_title
+{
+    display: inline-block;
+
+}
+.line_notice_dl dd{
+    display: block;
+    width: 520px;
+    text-indent: 15px;
+}
+
+.line_notice_news a{
+    color: white;
+    display: none;
+    text-align:left;
+}
+
+.line_notice_news{
+    width: 100%;
+}
+
+.news_on{
+    display: block !important;
+}
+
+.notice_title img{
+    display: block;
+}
+.line_notice_plus{
+    display: inline-block;
+}
+
+
+.line_notice_conr > a{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+.line_notice_conr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/**************** prom section ************/
+
+.notice_prom{
+    margin-right: 70px;
+}
+
+.notice_prom_up{
+    display: none;
+}
+
+.main_prom_slider{
+    display: flex;
+}
+
+.main_prom_slider>li{
+    margin-right: 10px;
+    position: relative;
+    right: 829px;
+    opacity: 0.4;
+}
+
+.main_prom_slider>li:nth-child(2){
+    opacity: 1;
+}
+
+.main_prom_slider ul:last-child>li{
+    display: none;
+}
+
+.main_prom_banner{
+    background: #f6f5ef;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+.banner_up{
+    height: 0;
+    animation: banner_up 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes banner_up{
+    from{
+        height: 720px;
+        padding: 100px 0 60px;
+    }to{
+        height: 0px;
+        padding: 0 0;
+    }
+}
+
+.banner_down{
+    height: 0;
+    animation: banner_down 1s;
+    animation-fill-mode: forwards;
+    padding: 100px 0 60px;
+    
+}
+
+@keyframes banner_down{
+    to{
+        height: 720px;
+        padding: 100px 0 60px;
+    }from{
+        height: 0px;
+        padding: 0 0;
+    }
+}
+
+
+.main_prom_viewpoint{
+    width: 819px;
+    height: 560px;
+    overflow: visible;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+.prom_slider{
+    animation: prom_slider 1s;
+    animation-fill-mode: forwards;
+    right: 829px;
+} 
+
+@keyframes prom_slider{
+    from{
+        right: 829px;
+    }to{
+        right: 1658px;
+    }
+}
+
+.prom_reverse{
+    animation: prom_reverse 1s;
+    animation-fill-mode: forwards;
+    right: 829px;
+} 
+
+@keyframes prom_reverse{
+    from{
+        right: 1658px;
+    }to{
+        right: 829px;
+    }
+}
+
+
+.swipe_left{
+    background: url(
+        https://www.starbucks.co.kr/common/img/common/arrow_left_on.png
+    ) no-repeat center center transparent;
+    border: 2px solid #222;
+    border-radius: 27.5px;
+    width: 55px;
+    height: 55px;
+    display: inline-block;
+}
+
+.swipe_right{
+    background: url(
+        https://www.starbucks.co.kr/common/img/common/arrow_right_on.png
+    ) no-repeat center center transparent;
+    border: 2px solid #222;
+    border-radius: 27.5px;
+    width: 55px;
+    height: 55px;
+  
+}
+
+.prom_control{
+    display: inline-block;
+    height: 100%;
+}
+
+.prom_control_left,
+.prom_control_right{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 0;
+}
+
+.prom_control_right{
+    right: -10%;
+}
+
+.prom_control_left{
+    left: -10%;
+}
+
+.main_prom_slider li > a{
+    width: 121px;
+    height: 34px;
+    line-height: 30px;
+    font-size: 14px;
+    position: relative;
+    bottom: 5%;
+    border: 2px solid black;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+.main_prom_slider{
+  
+    text-align: center;
+}
+
+
+/****** rewards *********/
+
+.new_rewards_wrap{
+    background: #1e3932;
+    padding: 30px 0 40px;
+}
+
+.rewards_logo{
+    width: 16.3%;
+}
+
+.rewards_content{
+    display: inline-block;
+}
+
+.new_rewards_con{
+    height: 100%;
+    color: white;
+}
+
+.mobile_br{
+    display: none;
 }
