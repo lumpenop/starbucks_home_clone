@@ -547,9 +547,32 @@ a{
     opacity: 0.4;
 }
 
+#opac4{
+    opacity: 0.4 !important;
+}
+
 .main_prom_slider>li:nth-child(2){
     opacity: 1;
+    
 }
+
+#opac1{
+    animation-fill-mode: forwards;
+    animation: opacity 1s;
+    opacity: 1;
+  
+}
+@keyframes opacity{
+    from{
+        right: 1658px;
+   
+    }to{
+        right: 829px;
+     
+    }
+}
+
+
 
 .main_prom_slider ul:last-child>li{
     display: none;
@@ -557,13 +580,15 @@ a{
 
 .main_prom_banner{
     background: #f6f5ef;
-    padding: 0;
+   
     overflow: hidden;
     width: 100%;
+    height: 0;
 }
 
 .banner_up{
     height: 0;
+    display: block;
     animation: banner_up 1s;
     animation-fill-mode: forwards;
 }
@@ -575,11 +600,13 @@ a{
     }to{
         height: 0px;
         padding: 0 0;
+        
     }
 }
 
 .banner_down{
-    height: 0;
+    height: 720px;
+    display: block;
     animation: banner_down 1s;
     animation-fill-mode: forwards;
     padding: 100px 0 60px;
@@ -615,8 +642,10 @@ a{
 @keyframes prom_slider{
     from{
         right: 829px;
+        
     }to{
         right: 1658px;
+        
     }
 }
 
@@ -719,3 +748,598 @@ a{
 .mobile_br{
     display: none;
 }
+
+/************** main bean section **********/
+
+.main_bean_wrap{
+    height: 573px;
+    background: url(
+        https://image.istarbucks.co.kr/upload/common/img/main/2021/2021_cherryblossom_bean_bg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.main_bean_con{
+    position: relative;
+}
+
+.bean_img_box,
+.bean_txt_box{
+    display: inline-block;
+
+}
+
+.bean_img_box,
+.bean_txt_box{
+    position: absolute;
+}
+
+.bean_txt_box{
+    right: -13%;
+    top: 180%;
+   
+}
+
+.txt_box_slide{
+    animation: txt_box 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes txt_box{
+    from{
+        right: -13%;
+        
+    }to{
+        right: 17%;
+    }
+}
+
+.bean_img_box{
+    top: 50%;
+    left: -26%;
+ 
+}
+
+.img_box_slide{
+    animation: img_box 1s;
+    animation-fill-mode: forwards;
+    
+}
+
+@keyframes img_box{
+    from{
+        left: -26%;
+    }to{
+        left: 6%;
+    }
+}
+
+.bean_txt_box a{
+    width: 125px;
+    height: 38px;
+    line-height: 34px;
+    font-size: 14px;
+    z-index: 6;
+    display: block;
+    margin-top: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.info_content_txt{
+    margin-bottom: 10px;
+   
+    width: 100%;
+}
+
+.info_content_txt p {
+    display: inline-block;
+}
+
+
+.sign_in{
+    display: inline-block;
+    position: relative;
+    bottom: 5px;
+    left: 17.5%;
+}
+
+
+
+.join_btn{
+    display: inline-block;
+    background: #00704a;
+    border: 2px solid #00704a;
+    height: 38px;
+    line-height: 36px;
+    padding: 0 18.5px;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.login_btn{
+    display: inline-block;
+   
+    border: 2px solid white;
+    height: 38px;
+    line-height: 36px;
+    padding: 0 18.5px;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.info_content_txt h2{
+    font-weight: normal;
+}
+
+.rewards_logo{
+    position: absolute;
+    left: 4%;
+    top: 0;
+}
+
+.rewards_content{
+    width: 75%;
+    position: relative;
+    right: -16%;
+}
+
+.info_content{
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+    left: 10%;
+    border-bottom: 1px solid #4b615b;;
+}
+
+.gift_content{
+    position: relative;
+    display: flex;
+}
+
+.gift_content p{
+    left: 10%;
+    position: relative;
+    font-size: 14px;
+    vertical-align: baseline;
+}
+
+
+
+.gift_content a{
+    position: relative;
+    top: 0;
+    right: -15%;
+    display: inline-block;
+    border-radius: 5px;
+    width: 183px;
+    height: 38px;
+    line-height: 36px;
+    font-size: 14px;
+    color: white;
+    border: 2px solid white;
+}
+
+/************** reserve section *************/
+
+.reserve_wrap{
+    background: url(
+        'https://image.istarbucks.co.kr/upload/common/img/main/2021/reserve_sundried_brazil_bg2.jpg') 
+        no-repeat center top;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    height: 400px;
+}
+
+.reserve_inner{
+    background: url(
+        https://image.istarbucks.co.kr/upload/common/img/main/2021/reserve_sundried_brazil_bean4_1.png
+    )no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    height: 400px;
+    right: 0;
+    width: 1814px;
+    display: block;
+  
+}
+
+.reserve_wrap:before{
+    content: '';
+    background: url(
+        https://image.istarbucks.co.kr/upload/common/img/main/2021/reserve_sundried_brazil_bg_shape.png) 
+        no-repeat left top;
+    display: block;
+    position: absolute;
+    top: 47px;
+    left: 0;
+    width: 214px;
+    height: 130px;
+}
+
+.reserve_content img{
+    display: block;
+    padding-top: 110px;
+}
+
+.reserve_content{
+    display: inline-block;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reserve_wrap a{
+    
+    display: inline-block;
+    border-radius: 5px;
+    width: 125px;
+    height: 38px;
+    line-height: 34px;
+    color: #815932;
+    border: 2px solid #815932;;
+}
+
+/************** favWrap ***************/
+
+.winter_fav_wrap{
+    background: url(
+        https://www.starbucks.co.kr/common/img/main/fav_prod_bg_new.jpg
+    ) no-repeat fixed;
+    background-position: center;
+    background-size: cover;
+    height: 800px;
+
+}
+
+.fav_prod_txt1{
+    text-align: right;
+    height: 204px;
+    margin-bottom: 40px;
+}
+
+.fav_prod_txt2{
+
+    margin-bottom: 40px;
+    height: 156px;
+}
+
+
+.winter_con{
+    width: 1280px;
+    height: 100% !important;
+    padding: 120px 0 180px;
+    position: relative;
+    text-align: right;
+}
+
+.fav_prod{
+    display: inline-block;
+    text-align: right;
+    position: absolute;
+    left: -26%;
+}
+
+.fav_prod a{
+    display: inline-block;
+    color: white;
+    font-size: 15px;
+    width: 125px;
+    height: 38px;
+    line-height: 34px;
+    border: 2px solid white;
+    border-radius: 5px;
+
+}
+
+/************ reverse3 wrap *************/
+.reserve3_con{
+    width: 1200px;
+    padding: 90px 0;
+    height: 700px !important;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.reserve_left{
+    display: inline-block;
+}
+
+.reserve_left:before{
+    content: "";
+    position: absolute;
+    top: 61.8%;
+    left: 9.5%;
+    width: 95.3%;
+    height: 1px;
+    background-color: #cccccb;
+}
+
+.reserve_left:after{
+    content: "";
+    position: absolute;
+    top: 136px;
+    left: 42%;
+    width: 1px;
+    height: 64%;
+    background-color: #cccccb;
+}
+
+.reserve_left img{
+    position: relative;
+    z-index: 2;
+}
+
+.reserve_right{
+    
+    margin-left: 100px;
+    display: inline-block;
+}
+
+.reserve_right img{
+    position: relative;
+    right: -70%;
+    top: 40%;
+}
+
+.detail_btn a{
+    background:url(
+        'https://image.istarbucks.co.kr/upload/common/img/main/2020/btn_magazine_pc.png'
+        ) 0 0 no-repeat;
+    width: 100%;
+    height: 100%;
+    display: block;
+ 
+}
+
+.detail_btn{
+    text-indent: -9999px;
+    width: 287px;
+    height: 17px;
+    position: absolute;
+    top: 65%;
+    right: -70%;
+   
+   
+}
+
+.reserve_img_slide{
+    animation: reserve_img 1.2s;
+    animation-fill-mode: forwards;
+   
+}
+
+@keyframes reserve_img{
+    from{
+        right: -70%;
+    }to{
+        right:3%;
+    
+    }
+}
+
+
+.reserve_div_slide{
+    animation: reserve_div 1.4s;
+    animation-fill-mode: forwards;
+   
+}
+
+@keyframes reserve_div{
+    from{
+        right: -60%;
+    }to{
+        right: 29%;
+    
+    }
+}
+
+/************ store section ***********/
+
+.store_wrap{
+    background: url(
+        https://www.starbucks.co.kr/common/img/main/store_bg.jpg
+    ) no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.store_con{
+    height: 400px;
+    position: relative;
+
+}
+
+.store_img{
+    position: absolute;
+}
+
+.store_img4{
+    right: -5%;
+    bottom: 0;
+}
+
+.store_img3{
+    right: 30%;
+    top: -15%;
+}
+
+.store_img2{
+    left: 26%;
+    bottom: 5%;
+}
+.store_img1{
+    left: 6%;
+}
+
+.store_right{
+    display: inline-block;
+    width: 385px;
+    position: absolute;
+    right: 5%;
+    top: 30%;
+
+}
+
+.store_txt2{
+    margin-top: 14px;
+}
+.store_txt_btn{
+    margin-top: 20px;
+    display: inline-block;
+    border-radius: 3px;
+    width: 125px;
+    height: 38px;
+    line-height: 34px;
+    border: 2px solid #222;
+}
+
+/****** footer section ***********/
+
+footer{
+    padding-top: 30px;
+    background: #2C2A29;
+    position: relative;
+}
+
+.footer_con{
+    height: 240px;
+    background: url(
+        https://www.starbucks.co.kr/common/img/footer/footer_logo.png
+    ) right 8px no-repeat;
+}
+
+.footer_menu_wrap{
+    display: flex;
+}
+
+.footer_menu li{
+    width: 220px;
+    text-align: left;
+    height: 24px;
+    line-height: 24px;
+}
+.footer_menu li a{
+    color: white;
+    font-size: 12px;
+}
+
+.footer_menu_tit{
+    display: block;
+    height: 40px !important;
+}
+
+
+
+
+.footer_menu_tit h4{
+    font-size: 14px;
+    text-align: left;
+    line-height: 40px;
+
+}
+
+.footer_awards_wrap{
+    width: 100%;
+    background: #282828;
+   
+    position: relative;
+    bottom: 20%;
+}
+
+.footer_awards_slider{
+    display: flex;
+    width: 100%;
+}
+
+.footer_awards_con{
+    height: 80px;
+}
+
+/************** copyright *************/
+
+
+.copyright_con{
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+
+.copy{
+    margin: 0 auto;
+  
+    display: inline-flex;
+}
+
+.copy a{
+    padding: 0 10px;
+    display: block;
+    color: #ccc;
+    font-size: 12px;
+    border-right: 1px solid #393939;
+}
+
+.last_a{
+    border: none !important;
+}
+.link_con{
+    display: flex;
+    height: 60px;
+   
+}
+
+.link{
+    display: inline-flex;
+    margin: 0 auto;
+    
+}
+.link a{
+    color: #eee;
+    font-size: 12px;
+    width: 114px;
+    height: 34px;
+    line-height: 30px;
+    border: 2px solid #eee;
+    border-radius: 3px;
+    margin-right: 8px;
+
+}
+
+.copy_menu{
+    text-align: center;
+    height: 30px;
+}
+.copy_list{
+    display: inline-flex;
+}
+
+.copy_list li{
+    padding: 0 10px;
+}
+
+.copy_list a{
+    color: #ccc;
+    font-size: 12px;
+}
+
+.en_wrap{
+    text-align: center;
+    height: 60px;
+}
+
+.en{
+    color: #ccc;
+    font-size: 12px;
+}
+

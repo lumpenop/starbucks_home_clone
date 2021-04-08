@@ -194,15 +194,23 @@ goLeft = () =>{
     document.querySelector('.main_prom_slider').prepend(li);
     slider2 = document.querySelectorAll('.main_prom_slider > li')
     for(i=0; i<slider2.length;i++){
-        slider2[i].classList.add('prom_reverse');
+        if(i==2){
+            slider2[2].id="opac1";
+            slider2[1].id="opac4";
+        }else{
+            slider2[i].classList.add('prom_reverse');
+        }
     }
 
     setTimeout(function(){
         document.querySelector('.main_prom_slider').removeChild(slider2[slider2.length-1]);
         for(i=0; i<slider2.length;i++){
+          
             slider2[i].removeAttribute('class');
+            slider2[i].removeAttribute('id');
         }
     }, 1000)
+ 
 
     setTimeout(function(){
         document.querySelector('.swipe_left').setAttribute('onclick','goLeft();')
@@ -218,11 +226,16 @@ function goRight(){
     promInterval = setInterval(slideProm,4000);
 }
 
+
 function bannerDown(){
     banner = document.querySelector('.main_prom_banner');
-    banner.className = "main_prom_banner banner_down";
-    document.querySelector('.notice_prom_up').style.display='block';
-    document.querySelector('.notice_prom_down').style.display='none';
+    if(banner.className == "main_prom_banner" || banner.className == "main_prom_banner banner_up"){
+        banner.className = "main_prom_banner banner_down";
+        document.querySelector('.notice_prom_up').style.display='block';
+        document.querySelector('.notice_prom_down').style.display='none';
+    }else{
+        bannerUp()
+    }
 }
 
 function bannerUp(){
@@ -231,3 +244,75 @@ function bannerUp(){
     document.querySelector('.notice_prom_down').style.display='block';
     document.querySelector('.notice_prom_up').style.display='none';
 }
+
+
+///////////// bean section /////////////
+
+
+document.addEventListener('scroll', function() {
+
+
+   
+   
+    if (document.documentElement.scrollTop < 50) {
+        document.querySelector('.bean_img_box').className= 'bean_img_box';
+        document.querySelector('.bean_txt_box').className= 'bean_txt_box';
+        document.querySelector('.fav_prod').className= 'fav_prod';
+        document.querySelector('.reserve_img_slide').removeAttribute('class');
+        document.querySelector('.detail_btn').className = 'detail_btn';
+    }
+      
+});
+
+const options = {
+    threshold : [0, 0.5, 1]
+  }
+
+
+const io = new IntersectionObserver((entries, observer)=>{
+    entries.forEach(entry => {
+        height = entry.intersectionRatio;
+      if (entry.intersectionRatio <= 1 && entry.intersectionRatio > 0.3){
+            entry.target.setAttribute('class', 'bean_img_box img_box_slide');
+            document.querySelector('.bean_txt_box').setAttribute('class', 'bean_txt_box txt_box_slide');
+            
+      }
+      });},options);
+  
+  box = document.querySelector('.bean_img_box');
+  io.observe(box);
+
+  
+
+const iot = new IntersectionObserver((entries, observer)=>{
+    entries.forEach(entry => {
+        height = entry.intersectionRatio;
+      if (entry.intersectionRatio <= 1 && entry.intersectionRatio > 0.3){
+            entry.target.setAttribute('class', 'fav_prod img_box_slide');
+            
+      }
+      });},options);
+  
+  prodBox = document.querySelector('.fav_prod');
+  iot.observe(prodBox);
+
+
+
+const reserveIo = new IntersectionObserver((entries, observer)=>{
+entries.forEach(entry => {
+    height = entry.intersectionRatio;
+    if (entry.intersectionRatio <= 1 && entry.intersectionRatio > 0.3){
+        entry.target.setAttribute('class', 'reserve_img_slide');
+        
+    
+            document.querySelector('.detail_btn').className='detail_btn reserve_div_slide';
+      
+    }
+    });},options);
+
+reserveBox = document.querySelector('.reserve_right img');
+reserveIo.observe(reserveBox);
+
+
+
+ 
