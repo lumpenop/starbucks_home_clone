@@ -74,9 +74,12 @@ mouseOver = (menu) => {
 
 
 gnbSub = document.querySelectorAll('.gnb_sub');
+gnbSubTxbg = document.querySelectorAll('.gnb_sub_txbg');
 for(i=0; i<gnbSub.length; i++){
     gnbSub[i].setAttribute("onmouseover","gnbSubOn();");
     gnbSub[i].setAttribute("onmouseout","mouseOff();");
+    gnbSubTxbg[i].setAttribute("onmouseover","gnbSubOn();");
+    gnbSubTxbg[i].setAttribute("onmouseout","mouseOff();");
 }
 
 
@@ -96,12 +99,18 @@ function gnbSubOn(menu){
     gnbSub = document.querySelectorAll('.gnb_sub');
     for(i=0; i<gnbSub.length;i++){
         gnbSub[i].className = 'gnb_sub';
-       
     }
     
     chosenMenu = menuIndex;
 
     gnbSub[menuIndex].classList.add('sub_on'); 
+
+
+    gnbSubTxbg = document.querySelectorAll('.gnb_sub_txbg');
+    for(i=0; i<gnbSub.length;i++){
+        gnbSubTxbg[i].className = 'gnb_sub_txbg';
+    }
+    gnbSubTxbg[menuIndex].classList.add('sub_on');
    
 
     
@@ -125,6 +134,11 @@ function mouseOff(){
     for(i=0; i<gnbSub.length;i++){
         gnbSub[i].className = 'gnb_sub';
     }
+    gnbSubTxbg = document.querySelectorAll('.gnb_sub_txbg');
+    for(i=0; i<gnbSub.length;i++){
+        gnbSubTxbg[i].className = 'gnb_sub_txbg';
+    }
+
 }
 
 
