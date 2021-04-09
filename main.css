@@ -20,7 +20,7 @@ a{
 
 .container{
     width: 1100px;
-    height: 120px;
+
     margin: 0 auto;
     position: relative;
 }
@@ -83,7 +83,7 @@ a{
     display: flex;
     float: right;
     text-align: center;
-
+    margin-right: 20.5%;
 }
 
 .body_wrap{
@@ -107,6 +107,8 @@ a{
     float: right;
 }
 
+.gnb_nav_con{width: 100%;}
+
 .gnb_nav_con > ul > li > h2 > a{
     padding: 6px 12px 0 12px;
     display: block;
@@ -114,16 +116,43 @@ a{
     font-weight: 500;
     height: 68px;
     line-height: 32px;
+    
+}
+
+.gnb_nav_con > ul > li {
+    display: inline-block;
+}
+
+.gnb_nav_con {
+    height: 120px;
+}
+
+.gnb_con{
+    height: 123px;
+}
+
+
+.gnb_sub_wrap{
+    position: absolute;
+    right: 0;
+    width: 100%;
+    top: 56%;
 }
 
 .gnb_sub{
-    position: absolute;
-    left: -41%;
-    top: 53%;
+    width: 100%;
+}
+
+.gnb_sub_txbg_con{
+    display: flex;
 }
 
 .gnb_sub_txbg,
 .gnb_sub {
+   
+}
+
+.gnb_sub_wrap{
     display: none;
 }
 
@@ -133,19 +162,16 @@ a{
 }
 
 .gnb_sub_txbg{
-    position: absolute;
-    width: 2000px;
-    left: -41%;
-    top: 294%;
+   
+    width: 100%px;
+
     background: url(
         https://www.starbucks.co.kr/common/img/common/gnb_sub_txbg.jpg
     );
-    padding: 30px 0 20px;
+    padding: 10px 0 20px;
 }
 
-.gnb_sub_tx{
-    float: left;
-}
+
 
 .gnb_sub_tx a{
     color: #999;
@@ -165,7 +191,7 @@ a{
 }
 
 .gnb_sub{
-    width: 2000px;
+    width: 100%;
     background: #2C2A29;
     padding: 20px 0;
    
@@ -177,8 +203,12 @@ a{
     color: white !important;
 }
 
-.gnb_sub_con ul {
-    float: left;
+.sub_tit_con{
+    height: 120px;
+}
+
+.gnb_sub_con {
+    display: flex;
 }
 
 .gnb_sub_con ul a{
@@ -188,6 +218,9 @@ a{
     color: #999;
 }
 
+.gnb_sub_con{
+    position: relative;
+}
 
 
 /**** sub_title section *****/
@@ -360,7 +393,12 @@ a{
 }
 
 /********** blooming *************/
-
+.blooming_con a:hover{
+    background: #935649;
+    color: #fff;
+    transition: 0.5s;
+    border-color: #935649;
+}
 .blooming_wrap{
     background: url(
         https://image.istarbucks.co.kr/upload/common/img/main/2021/2021_cherryblossom_bg.jpg
@@ -372,6 +410,7 @@ a{
 
 .blooming_con{
     padding-top: 59px;
+    height: 120px;
     position: relative;
 }
 
@@ -675,6 +714,12 @@ a{
     display: inline-block;
 }
 
+.swipe_left:hover,
+.swipe_right:hover{
+    background-color: rgba(255, 255, 255, 0.9);
+    
+}
+
 .swipe_right{
     background: url(
         https://www.starbucks.co.kr/common/img/common/arrow_right_on.png
@@ -752,6 +797,7 @@ a{
 /************** main bean section **********/
 
 .main_bean_wrap{
+    padding-top: 40px;
     height: 573px;
     background: url(
         https://image.istarbucks.co.kr/upload/common/img/main/2021/2021_cherryblossom_bean_bg.jpg) no-repeat;
@@ -767,6 +813,7 @@ a{
 .bean_img_box,
 .bean_txt_box{
     display: inline-block;
+ 
 
 }
 
@@ -777,7 +824,7 @@ a{
 
 .bean_txt_box{
     right: -13%;
-    top: 180%;
+    margin-top: 140px;
    
 }
 
@@ -825,6 +872,12 @@ a{
     margin-top: 20px;
     border: 2px solid black;
     border-radius: 5px;
+}
+
+.bean_txt_box a:hover{
+    background: black;
+    color: white;
+    transition: 0.5s;
 }
 
 .info_content_txt{
@@ -968,18 +1021,22 @@ a{
 
 .reserve_content img{
     display: block;
-    padding-top: 110px;
+    padding: 110px 0 20px 0;
+
 }
 
 .reserve_content{
     display: inline-block;
     max-width: 1080px;
-    margin-left: auto;
-    margin-right: auto;
+    position: absolute;
+    right: 50%;
+    text-align: center;
+
+
 }
 
 .reserve_wrap a{
-    
+    margin-left: 130px;
     display: inline-block;
     border-radius: 5px;
     width: 125px;
@@ -1038,7 +1095,12 @@ a{
     line-height: 34px;
     border: 2px solid white;
     border-radius: 5px;
+}
 
+.fav_prod a:hover{
+    background: white;
+    color: black;
+    transition: 0.5s;
 }
 
 /************ reverse3 wrap *************/
@@ -1093,24 +1155,43 @@ a{
 }
 
 .detail_btn a{
+    position: relative;
+    right: 2px;
+    bottom: 3px;
     background:url(
         'https://image.istarbucks.co.kr/upload/common/img/main/2020/btn_magazine_pc.png'
-        ) 0 0 no-repeat;
-    width: 100%;
-    height: 100%;
+        ) 5px 3px no-repeat;
+        background-size: 300px 40px;
+        width: 310px;
+        height: 23px;
+   
+    background-repeat: no-repeat !important;
     display: block;
- 
+}
+
+.detail_btn a:hover{
+    transition: 0.4s;
+    filter :brightness(0) invert(1);
+}
+
+.detail_btn:hover{
+    background: sandybrown;
+    transition: 0.5s;
 }
 
 .detail_btn{
+    width: 320px;
+    height: 36px;
+    padding: 10px;
     text-indent: -9999px;
-    width: 287px;
-    height: 17px;
+    border-radius: 3px;
     position: absolute;
     top: 65%;
-    right: -70%;
-   
-   
+    right: -74%;
+}
+
+.detail_btn a{
+    text-align: center;
 }
 
 .reserve_img_slide{
@@ -1203,6 +1284,12 @@ a{
     height: 38px;
     line-height: 34px;
     border: 2px solid #222;
+}
+
+.store_txt_btn:hover{
+    color: #eee;
+    background: black;
+    transition:  0.5s;
 }
 
 /****** footer section ***********/

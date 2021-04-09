@@ -73,13 +73,12 @@ mouseOver = (menu) => {
 }
 
 
-gnbSub = document.querySelectorAll('.gnb_sub');
-gnbSubTxbg = document.querySelectorAll('.gnb_sub_txbg');
+gnbSub = document.querySelectorAll('.gnb_sub_wrap');
+
 for(i=0; i<gnbSub.length; i++){
     gnbSub[i].setAttribute("onmouseover","gnbSubOn();");
     gnbSub[i].setAttribute("onmouseout","mouseOff();");
-    gnbSubTxbg[i].setAttribute("onmouseover","gnbSubOn();");
-    gnbSubTxbg[i].setAttribute("onmouseout","mouseOff();");
+
 }
 
 
@@ -95,10 +94,14 @@ function gnbSubOn(menu){
         menuIndex = mouseOver(menu);
     }
 
+    li = document.querySelectorAll('.gnb_nav_con > ul > li')
+    liA = document.querySelectorAll('.gnb_nav_con > ul > li > h2 > a')
+    li[menuIndex].style.background = '#2C2A29';
+    liA[menuIndex].style.color = '#fff';
 
-    gnbSub = document.querySelectorAll('.gnb_sub');
+    gnbSub = document.querySelectorAll('.gnb_sub_wrap');
     for(i=0; i<gnbSub.length;i++){
-        gnbSub[i].className = 'gnb_sub';
+        gnbSub[i].className = 'gnb_sub_wrap';
     }
     
     chosenMenu = menuIndex;
@@ -106,11 +109,7 @@ function gnbSubOn(menu){
     gnbSub[menuIndex].classList.add('sub_on'); 
 
 
-    gnbSubTxbg = document.querySelectorAll('.gnb_sub_txbg');
-    for(i=0; i<gnbSub.length;i++){
-        gnbSubTxbg[i].className = 'gnb_sub_txbg';
-    }
-    gnbSubTxbg[menuIndex].classList.add('sub_on');
+
    
 
     
@@ -130,14 +129,18 @@ function gnbSubOn(menu){
 
 function mouseOff(){
    
-    gnbSub = document.querySelectorAll('.gnb_sub');
+    gnbSub = document.querySelectorAll('.gnb_sub_wrap');
     for(i=0; i<gnbSub.length;i++){
-        gnbSub[i].className = 'gnb_sub';
+        gnbSub[i].className = 'gnb_sub_wrap';
     }
-    gnbSubTxbg = document.querySelectorAll('.gnb_sub_txbg');
-    for(i=0; i<gnbSub.length;i++){
-        gnbSubTxbg[i].className = 'gnb_sub_txbg';
-    }
+
+    li = document.querySelectorAll('.gnb_nav_con > ul > li')
+    liA = document.querySelectorAll('.gnb_nav_con > ul > li > h2 > a')
+    li[menuIndex].style= 'none';
+    liA[menuIndex].style= 'none';
+
+   
+
 
 }
 
